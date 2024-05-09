@@ -14,7 +14,6 @@ import {HttpClient} from "@angular/common/http";
 })
 export class UpdatePostComponent implements OnInit {
   idPost: number;
-  idUser: number = 1;
   updatedPost: any = {};
   imageFile: File;
   typePostOptions: string[] = [];
@@ -84,7 +83,7 @@ export class UpdatePostComponent implements OnInit {
   }
 
   updatePost(): void {
-    this.postService.updatePost(this.idUser, this.idPost, this.BlocForm.value.titre, this.BlocForm.value.description, this.BlocForm.value.typePost, this.imageFile)
+    this.postService.updatePost(this.userId, this.idPost, this.BlocForm.value.titre, this.BlocForm.value.description, this.BlocForm.value.typePost, this.imageFile)
       .subscribe(
         (response: any) => {
           this.updatedPost.image = response.imageUrl;

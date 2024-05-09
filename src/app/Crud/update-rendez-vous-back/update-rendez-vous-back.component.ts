@@ -104,7 +104,7 @@ getUserByUsername() {
   submitAndNavigate(): void {
     if (this.rendezVousForm.valid) {
       this.updateRendezVous(); // Soumettez le formulaire
-      this.router.navigate(['/rendezvous']); // Naviguez vers la page des listes de rendez-vous
+      this.router.navigate(['/admin/rendezvous']); // Naviguez vers la page des listes de rendez-vous
     }
   }
 }

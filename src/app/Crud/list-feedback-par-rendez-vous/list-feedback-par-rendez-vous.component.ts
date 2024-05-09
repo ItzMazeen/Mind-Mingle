@@ -31,7 +31,7 @@ getUserByUsername() {
         // Extract the idUser field from the response
         this.userId = response.idUser;
         // Log the idUser to the console
-        console.log('User ID:', response);
+        console.log('User ID:', this.userId);
       },
       (error) => {
         // Handle errors if any
@@ -53,7 +53,7 @@ getUserByUsername() {
     }
   }
   goToList() {
-    this.router.navigate(['/rendezvous']); // Ajustez l'URL selon votre configuration
+    this.router.navigate(['/admin/rendezvous']); // Ajustez l'URL selon votre configuration
   }
 
 
